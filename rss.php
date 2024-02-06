@@ -27,6 +27,7 @@
             echo "<title>" . htmlentities($blogPost->attributes->title) . "</title>";
             echo "<link>https://rardk.com/blog/" . $blogPost->attributes->canonicalUrl . "</link>";
             echo "<description>" . htmlentities($blogPost->attributes->description) . "</description>";
+            echo "<pubDate>" . getCorrectDate($blogPost) . "</pubDate>";
             echo "</item>";
         }
 
