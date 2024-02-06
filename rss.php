@@ -31,8 +31,8 @@
 
         function getCorrectDate($item)
         {
-            if (!is_null($item->originallyPublishedDate)) {
-                return $item->originallyPublishedDate;
+            if (!is_null($item->originallyPostedDate)) {
+                return $item->originallyPostedDate;
             }
             return $item->publishedAt;
         }
