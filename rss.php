@@ -1,6 +1,5 @@
 <?php header("Content-type: text/xml"); ?>
-<?php echo "<?xml version=\"1.0\" encoding=\"utf-8\"?>
-<?xml-stylesheet href=\"/rss.xsl\" type=\"text/xsl\"?>"; ?>
+<?php echo "<?xml version=\"1.0\" encoding=\"utf-8\"?>" ?>
 <rss version='2.0'>
     <channel>
         <title>rardk64</title>
