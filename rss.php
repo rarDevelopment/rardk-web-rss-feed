@@ -23,9 +23,9 @@
 
         foreach ($json as $blogPost) {
             echo "<item>";
-            echo "<title>" . $blogPost->title . "</title>";
-            echo "<link>https://rardk.com/blog/" . $blogPost->canonicalUrl . "</link>";
-            echo "<description>" . $blogPost->description . "</description>";
+            echo "<title>$blogPost->title</title>";
+            echo "<link>https://rardk.com/blog/$blogPost->canonicalUrl</link>";
+            echo "<description>$blogPost->description</description>";
             echo "</item>";
         }
 
