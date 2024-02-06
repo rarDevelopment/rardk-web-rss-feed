@@ -23,18 +23,18 @@
 
         foreach ($json as $blogPost) {
             echo "<item>";
-            echo "<title>$blogPost->title</title>";
-            echo "<link>https://rardk.com/blog/$blogPost->canonicalUrl</link>";
-            echo "<description>$blogPost->description</description>";
+            echo "<title>" . htmlentities($blogPost->title) . "</title>";
+            echo "<link>https://rardk.com/blog/" . $blogPost->canonicalUrl . "</link>";
+            echo "<description>" . htmlentities($blogPost->description) . "</description>";
             echo "</item>";
         }
 
         function getCorrectDate($item)
         {
-            if (!is_null($item->originallyPostedDate)) {
-                return $item->originallyPostedDate;
+            if (!is_null($item->attributes->originallyPostedDate)) {
+                return $item->attributes->originallyPostedDate;
             }
-            return $item->publishedAt;
+            return $item->attributes->publishedAt;
         }
 
         ?>
