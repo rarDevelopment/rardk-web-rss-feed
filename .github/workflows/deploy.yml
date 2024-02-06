@@ -1,4 +1,4 @@
-name: 🛠️ Build and Deploy Website
+name: 🛠️ Build and Deploy
 on:
   push:
     branches:
