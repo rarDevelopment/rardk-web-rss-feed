@@ -1,4 +1,5 @@
-<?php header("Content-type: application/xml; charset=utf-8"); ?>
+<?php header("Content-type: application/xml; charset=utf-8");
+header('X-Content-Type-Options: nosniff'); ?>
 <?php echo "<?xml version=\"1.0\" encoding=\"utf-8\"?>" ?>
 <?php echo "<?xml-stylesheet href=\"/rss/rss.xsl\" type=\"text/xsl\"?>" ?>
 <rss version='2.0'>
