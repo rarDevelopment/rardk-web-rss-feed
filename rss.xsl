@@ -35,6 +35,7 @@
                                 <xsl:value-of select="/rss/channel/link"/>
                             </xsl:attribute>
                         Go to <xsl:value-of select="/rss/channel/title"/>
+ on the website
  &#x2192;
                         </a>
                     </header>

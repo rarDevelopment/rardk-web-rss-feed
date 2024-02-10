@@ -3,7 +3,7 @@
 <?php echo "<?xml-stylesheet href=\"/rss/rss.xsl\" type=\"text/xsl\"?>" ?>
 <rss version='2.0'>
     <channel>
-        <title>rardk64</title>
+        <title>rardk64's Shared Links</title>
         <link>https://rardk.com/links/</link>
         <description>The links that I find interesting enough to share.</description>
         <language>en-us</language>
