@@ -30,32 +30,29 @@ h1 {
     padding-bottom: 30px;
 }
 
-.page-description {
-    margin-block-start: 5px;
-}
-
-.page-description-container {
-    padding-bottom: 10px;
-}
-
-.page-description-content {
+.feed-description {
+    text-align: center;
+    margin: 0 auto;
     text-align: center;
     width: 70%;
     max-width: 800px - 150px;
     min-width: 370px;
+    padding-top: 10px;
 }
 
 .with-border {
     background-color: rgba(164, 39, 214, 0.506);
     border-radius: 5px;
-    padding: 20px;
+    padding: 10px;
     margin-bottom: 15px;
     box-shadow: 4px 4px #000000;
+    width: 90%;
+    text-align: center;
+    max-width: 500px;
 }
 
-.webrings {
-    text-align: center;
-    font-size: 16px;
+.bold {
+    font-weight: 600;
 }
 
 a {
@@ -63,193 +60,6 @@ a {
 }
 a:visited {
     color: #0285ff;
-}
-
-.page-description-content a {
-    color: white;
-}
-
-.page-description-content a:visited {
-    color: white;
-}
-
-.page-description-content a:active {
-    color: white;
-}
-
-.page-description-container,
-.content-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-}
-
-.card-title {
-    text-align: center;
-}
-
-.content-container-card {
-    text-align: left;
-    padding-left: 38px;
-    padding-right: 38px;
-    padding-top: 15px;
-    padding-bottom: 15px;
-
-    border: 1px solid #000000;
-    background-color: #ffffff;
-    color: #000000;
-    border-radius: 5px;
-    box-shadow: 3px 3px #000000;
-    width: 50%;
-    max-width: 800px;
-    min-width: 370px;
-}
-
-.content-container-card ::selection {
-    background-color: #000000;
-    color: #ffffff;
-}
-
-.content-container-card a {
-    color: #000000;
-}
-
-.content-container-card a:visited {
-    color: #000000;
-}
-
-.button {
-    display: inline-block;
-    border-style: solid;
-    border-width: 1px;
-    border-radius: 3px;
-    border-color: #000000;
-    font-weight: 500;
-    padding: 10px;
-    margin: 4px;
-    font-size: 17px;
-    text-align: center;
-    color: #000000;
-    cursor: pointer;
-    background-color: #ffffff;
-}
-
-.button:hover {
-    background-color: #f28834;
-}
-
-.button.action:disabled,
-.button.action[disabled="disabled"],
-.button.action:disabled:hover,
-.button.action[disabled="disabled"]:hover,
-.button.action:disabled:active,
-.button.action[disabled="disabled"]:active,
-.button.action.primary:disabled,
-.button.action.primary[disabled="disabled"],
-.button.action.primary:disabled:hover,
-.button.action.primary[disabled="disabled"]:hover,
-.button.action.primary:disabled:active,
-.button.action.primary[disabled="disabled"]:active,
-.button.action.secondary:disabled,
-.button.action.secondary[disabled="disabled"],
-.button.action.secondary:disabled:hover,
-.button.action.secondary[disabled="disabled"]:hover,
-.button.action.secondary:disabled:active,
-.button.action.secondary[disabled="disabled"]:active,
-.button.action.tertiary:disabled,
-.button.action.tertiary[disabled="disabled"],
-.button.action.tertiary:disabled:hover,
-.button.action.tertiary[disabled="disabled"]:hover,
-.button.action.tertiary:disabled:active,
-.button.action.tertiary[disabled="disabled"]:active,
-.button.action.danger:disabled,
-.button.action.danger[disabled="disabled"],
-.button.action.danger:disabled:hover,
-.button.action.danger[disabled="disabled"]:hover,
-.button.action.danger:disabled:active,
-.button.action.danger[disabled="disabled"]:active {
-    background-color: rgba(56, 56, 56, 0.12);
-    color: rgba(65, 65, 65, 0.38);
-    cursor: default;
-}
-
-.button.action.primary {
-    background-color: rgb(137, 37, 196);
-    color: #ffffff;
-}
-
-.button.action.primary:hover {
-    background-color: rgb(162, 42, 232);
-    color: #ffffff;
-}
-
-.button.action.primary:active {
-    background-color: rgb(152, 32, 222);
-    color: #ffffff;
-}
-
-.button.action.secondary {
-    background-color: rgb(255, 255, 255);
-    color: #000000;
-}
-
-.button.action.secondary:hover {
-    background-color: rgb(245, 245, 245);
-    color: #000000;
-}
-
-.button.action.secondary:active {
-    background-color: rgb(235, 235, 235);
-    color: #000000;
-}
-
-.button.action.tertiary {
-    background-color: rgb(255, 64, 129);
-    color: #ffffff;
-}
-
-.button.action.tertiary:hover {
-    background-color: rgb(245, 54, 119);
-    color: #ffffff;
-}
-
-.button.action.tertiary:active {
-    background-color: rgb(235, 44, 109);
-    color: #ffffff;
-}
-
-.button.action.danger {
-    background-color: rgb(244, 67, 54);
-    color: #ffffff;
-}
-
-.button.action.danger:hover {
-    background-color: rgb(234, 57, 44);
-    color: #ffffff;
-}
-
-.button.action.danger:active {
-    background-color: rgb(224, 47, 34);
-    color: #ffffff;
-}
-
-.button.icon {
-    background-color: transparent;
-    color: #000000;
-    border: none;
-}
-
-.button.icon:hover {
-    background-color: rgb(245, 245, 245);
-}
-
-.button.icon:active {
-    background-color: rgb(235, 235, 235);
-}
-
-.button.icon.red {
-    color: rgb(224, 47, 34);
 }
 
 .body-container {
@@ -277,102 +87,6 @@ a:visited {
 .name {
     letter-spacing: 0.12rem;
     margin-bottom: 7px;
-}
-
-.bio {
-    font-size: 20px;
-    text-align: center;
-    letter-spacing: 0.12rem;
-    font-weight: 500;
-    text-transform: lowercase;
-    font-variant: small-caps;
-}
-
-.below-avatar-text {
-    color: #ffffff;
-}
-
-.below-avatar {
-    margin-bottom: 7px;
-    margin-top: 10px;
-}
-
-.divider {
-    padding-left: 5px;
-}
-
-.nav-icons {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-block-end: 10px;
-    margin-block-start: 10px;
-}
-
-.social-icon {
-    width: 25px;
-    padding-left: 5px;
-    padding-right: 5px;
-
-    transition: all 0.5s ease-in-out;
-}
-
-.social-icon:hover {
-    transform: rotate(360deg);
-}
-
-.social-icon:active {
-    opacity: 0;
-    transition: 0.1s linear;
-    transform: scale(3) rotate(10deg);
-}
-
-.github {
-    fill: #ffffff;
-}
-
-.twitch {
-    fill: #9146ff;
-}
-
-.mastodon {
-    fill: #6364ff;
-}
-
-.bluesky {
-    fill: #0285ff;
-}
-
-.twitter {
-    fill: #1d9bf0;
-}
-
-.discord {
-    fill: #5865f2;
-}
-
-.rss {
-    fill: #ffa500;
-}
-
-/* footer */
-.footer {
-    margin-top: 40px;
-    text-align: center;
-    font-size: 16px;
-}
-
-.copyright {
-    margin-bottom: 10px;
-}
-
-.external-post-box {
-    font-weight: bold;
-    text-decoration: none;
-    color: #000000;
-    max-width: 500px;
-    background-color: rgba(164, 39, 214, 0.506);
-    color: white;
 }
 
 .blog-post {
@@ -423,19 +137,4 @@ a:visited {
 }
 
 @media screen and (min-width: 0px) and (max-width: 767px) {
-    .below-avatar-text {
-        display: block;
-        padding-top: 5px;
-        padding-bottom: 5px;
-    }
-    .divider {
-        display: none;
-    }
-    .content-container-card {
-        padding-left: 10px;
-        padding-right: 2px;
-        font-size: 15px;
-        width: 90%;
-        margin: 0 auto;
-    }
 }

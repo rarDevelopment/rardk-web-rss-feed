@@ -27,17 +27,22 @@
                         <h1 class="name">
                             <xsl:value-of select="/rss/channel/title"/>
                         </h1>
-                        <p>
+                        <div class="with-border">
+                            <span class='bold'>To Subscribe:</span> Copy the URL from this page and paste it in your RSS reader.
+                        </div>
+                        <p class="feed-description">
                             <xsl:value-of select="/rss/channel/description"/>
                         </p>
-                        <a hreflang="en" target="_blank">
-                            <xsl:attribute name="href">
-                                <xsl:value-of select="/rss/channel/link"/>
-                            </xsl:attribute>
-                        Go to <xsl:value-of select="/rss/channel/title"/>
- on the website
+                        <p class="feed-description">
+                            <a hreflang="en" target="_blank">
+                                <xsl:attribute name="href">
+                                    <xsl:value-of select="/rss/channel/link"/>
+                                </xsl:attribute>
+                                <xsl:value-of select="/rss/channel/title"/>
+ on my site
  &#x2192;
-                        </a>
+                            </a>
+                        </p>
                     </header>
                     <main>
                         <div class="body-container">
