@@ -1,8 +1,9 @@
 <?php header("Content-type: text/xml"); ?>
 <?php echo "<?xml version=\"1.0\" encoding=\"utf-8\"?>" ?>
+<?php echo "<?xml-stylesheet href=\"rss.xsl\" type=\"text/xsl\"?>" ?>
 <rss version='2.0'>
     <channel>
-        <title>rardk64</title>
+        <title>rardk64 Blog</title>
         <link>https://rardk.com/blog/</link>
         <description>The rardk64 blog, where I write about video games, technology, and whatever else I'm feeling.</description>
         <language>en-us</language>
