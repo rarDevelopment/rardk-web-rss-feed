@@ -10,7 +10,7 @@
 
         <?php
 
-        $url = "https://raw.githubusercontent.com/rarDevelopment/rardk-web-json-files/main/links.json";
+        $url = "https://rardk.com/json/links.json";
 
         $response = file_get_contents($url);
 
