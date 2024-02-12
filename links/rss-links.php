@@ -22,11 +22,12 @@ header('X-Content-Type-Options: nosniff'); ?>
         });
 
         foreach ($json as $link) {
+            $date = new DateTime($link->dateShared);
             echo "<item>";
             echo "<title>" . htmlentities($link->title) . "</title>";
             echo "<link>" . $link->link . "</link>";
             echo "<description>" . htmlentities($link->description) . "</description>";
-            echo "<pubDate>" . $link->dateShared . "</pubDate>";
+            echo "<pubDate>" . $link->date->format(DateTime::RFC2822) . "</pubDate>";
             echo "</item>";
         }
 
