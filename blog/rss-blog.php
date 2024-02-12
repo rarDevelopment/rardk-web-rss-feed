@@ -11,7 +11,7 @@ header('X-Content-Type-Options: nosniff'); ?>
         <link><?php echo $frontendSite . "/blog/" ?></link>
         <description>The rardk64 blog, where I write about video games, technology, and whatever else I'm feeling.</description>
         <language>en-us</language>
-
+        <atom:link href="<?= $sharedSite ?>/rss/blog/" rel="self" type="application/rss+xml" />
         <?php
 
         $url = $apiSite . "/api/blog/posts/";

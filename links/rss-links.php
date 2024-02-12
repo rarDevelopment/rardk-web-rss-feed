@@ -11,6 +11,7 @@ header('X-Content-Type-Options: nosniff'); ?>
         <link><?php echo $frontendSite . "/links/" ?></link>
         <description>The links that I find interesting enough to share.</description>
         <language>en-us</language>
+        <atom:link href="<?= $sharedSite ?>/rss/links/" rel="self" type="application/rss+xml" />
 
         <?php
 
