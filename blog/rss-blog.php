@@ -8,7 +8,7 @@ header('X-Content-Type-Options: nosniff'); ?>
 <rss version='2.0'>
     <channel>
         <title>rardk64 Blog</title>
-        <link><?php echo $frontendSite . "/blog/" ?></link>
+        <link rel="self"><?php echo $frontendSite . "/blog/" ?></link>
         <description>The rardk64 blog, where I write about video games, technology, and whatever else I'm feeling.</description>
         <language>en-us</language>
         <!-- <atom:link href="<?= $sharedSite ?>/rss/blog/" rel="self" type="application/rss+xml" /> -->
@@ -36,7 +36,7 @@ header('X-Content-Type-Options: nosniff'); ?>
             echo "<link>" . $frontendSite . "/blog/" . $blogPost->attributes->canonicalUrl . "</link>";
             echo "<description>" . htmlentities($blogPost->attributes->description) . "</description>";
             echo "<pubDate>" . $date->format(DateTime::RFC2822) . "</pubDate>";
-            echo "<guid>" . $blogPost->attributes->guid . "</guid>";
+            echo "<guid>" . $frontendSite . "/blog/" . $blogPost->attributes->canonicalUrl . "</guid>";
             echo "</item>";
         }
 
