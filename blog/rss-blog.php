@@ -2,16 +2,19 @@
 header('X-Content-Type-Options: nosniff'); ?>
 <?php echo "<?xml version=\"1.0\" encoding=\"utf-8\"?>" ?>
 <?php echo "<?xml-stylesheet href=\"/rss/rss.xsl\" type=\"text/xsl\"?>" ?>
+
+<?php include '../var.php'; ?>
+
 <rss version='2.0'>
     <channel>
         <title>rardk64 Blog</title>
-        <link>https://rardk.com/blog/</link>
+        <link><?php echo $frontendSite . "/blog/" ?></link>
         <description>The rardk64 blog, where I write about video games, technology, and whatever else I'm feeling.</description>
         <language>en-us</language>
 
         <?php
 
-        $url = "https://rardk64-bot-api.com/api/blog/posts/";
+        $url = $apiSite . "/api/blog/posts/";
 
         $response = file_get_contents($url);
 
@@ -24,12 +27,16 @@ header('X-Content-Type-Options: nosniff'); ?>
             return strcmp($dateToCheckB, $dateToCheckA);
         });
 
+
         foreach ($json as $blogPost) {
+            $correctDate = getCorrectDate($blogPost);
+            $date = new DateTime($link->dateShared);
             echo "<item>";
             echo "<title>" . htmlentities($blogPost->attributes->title) . "</title>";
-            echo "<link>https://rardk.com/blog/" . $blogPost->attributes->canonicalUrl . "</link>";
+            echo "<link>" . $frontendSite . "/blog/" . $blogPost->attributes->canonicalUrl . "</link>";
             echo "<description>" . htmlentities($blogPost->attributes->description) . "</description>";
-            echo "<pubDate>" . getCorrectDate($blogPost) . "</pubDate>";
+            echo "<pubDate>" . $date->format(DateTime::RFC2822) . "</pubDate>";
+            echo "<guid>" . $blogPost->attributes->guid . "</guid>";
             echo "</item>";
         }
 

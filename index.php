@@ -1,1 +1,2 @@
-<?php header("Location: https://rardk.com/feeds/", true, 301);
+<?php include 'var.php'; ?>
+<?php header("Location: " . $frontendSite . "/feeds/", true, 301);
