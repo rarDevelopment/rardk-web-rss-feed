@@ -28,9 +28,10 @@ header('X-Content-Type-Options: nosniff'); ?>
             $date = new DateTime($link->dateShared);
             echo "<item>";
             echo "<title>" . htmlentities($link->title) . "</title>";
-            echo "<link>" . $link->link . "</link>";
+            echo "<link>" . $frontendSite . "/link/" . $link->slug . "</link>";
             echo "<description>" . htmlentities($link->description) . "</description>";
             echo "<pubDate>" . $date->format(DateTime::RFC2822) . "</pubDate>";
+            echo "<guid>" . $frontendSite . "/link/" . $link->slug . "</guid>";
             echo "</item>";
         }
 
