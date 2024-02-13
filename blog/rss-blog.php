@@ -8,10 +8,9 @@ header('X-Content-Type-Options: nosniff'); ?>
 <rss version='2.0'>
     <channel>
         <title>rardk64 Blog</title>
-        <link rel="self"><?php echo $frontendSite . "/blog/" ?></link>
+        <link><?php echo $frontendSite . "/blog/" ?></link>
         <description>The rardk64 blog, where I write about video games, technology, and whatever else I'm feeling.</description>
         <language>en-us</language>
-        <!-- <atom:link href="<?= $sharedSite ?>/rss/blog/" rel="self" type="application/rss+xml" /> -->
         <?php
 
         $url = $apiSite . "/api/blog/posts/";
@@ -30,7 +29,7 @@ header('X-Content-Type-Options: nosniff'); ?>
 
         foreach ($json as $blogPost) {
             $correctDate = getCorrectDate($blogPost);
-            $date = new DateTime($link->dateShared);
+            $date = new DateTime($correctDate);
             echo "<item>";
             echo "<title>" . htmlentities($blogPost->attributes->title) . "</title>";
             echo "<link>" . $frontendSite . "/blog/" . $blogPost->attributes->canonicalUrl . "</link>";
