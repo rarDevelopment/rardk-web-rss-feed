@@ -3,7 +3,7 @@ header('X-Content-Type-Options: nosniff'); ?>
 <?php echo "<?xml version=\"1.0\" encoding=\"utf-8\"?>" ?>
 <?php echo "<?xml-stylesheet href=\"/rss/rss.xsl\" type=\"text/xsl\"?>" ?>
 
-<?php include '../var.php'; ?>
+<?php include('../var.php'); ?>
 
 <rss version='2.0'>
     <channel>
