@@ -11,10 +11,9 @@ header('X-Content-Type-Options: nosniff'); ?>
         <link><?php echo $frontendSite . "/links/" ?></link>
         <description>The links that I find interesting enough to share.</description>
         <language>en-us</language>
-
         <?php
 
-        $url = $sharedSite . "/json/links.json";
+        $url = $apiSite . "/api/now/json/links/";
 
         $response = file_get_contents($url);
 
